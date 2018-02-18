@@ -12,7 +12,16 @@ body{
     background-position: center center;
     min-height: 100vh;
 }
-
+.spacetime{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
 /*  Toggle Tools Button */
 button.toggle-tools{
     position: absolute;
@@ -23,6 +32,7 @@ button.toggle-tools{
     border: none;
     cursor: pointer;
     outline: none;
+    z-index: 4;
 }
 button.toggle-tools img{
     width: 35px;
@@ -36,7 +46,8 @@ div.tools{
     background-color: #2c3e50;
     transition: .5s;
     border-radius: 0 5px 5px 0;
-    overflow: hidden
+    overflow: hidden;
+    z-index: 5;
 }
 div.tools.open{
     left: 0;
@@ -65,4 +76,25 @@ div.tools button:last-child{
 div.tools button img{
     transition: .1s;
     width: 20px
+}
+
+
+/* Mouse */
+#mouse, .clone{
+    position: absolute;
+    width: 100px;
+    height: 180px;
+    opacity: .5;
+    /* border-radius: 50%; */
+    /* border: 2px dashed red; */
+    /* background: rgba(255, 255, 255, .5); */
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.clone{
+    opacity: 1;
 }
